@@ -1,7 +1,7 @@
-#Dynasty
-##Dynasty Server Scripts
+# Dynasty
+## Dynasty Server Scripts
 
-#Run trigger indefinitely
+# Run trigger indefinitely
 ```Citizen.CreateThread(function()
     while true do 
     Citizen.Wait(500)

@@ -1,6 +1,6 @@
 # Dynasty Server Scripts
 
-## Run trigger indefinitely
+### Run trigger indefinitely
 ```Citizen.CreateThread(function()
     while true do 
     Citizen.Wait(500)
@@ -9,23 +9,28 @@
 end)
 ```
 
-Run trigger 100 times(or how many you want)
-Citizen.CreateThread(function()
+### Run trigger 100 times(or how many you want)
+```Citizen.CreateThread(function()
     for i = 1, 100 do
         Citizen.Wait(500)
         TriggerServerEvent("trigger_to_run")
     end
 end)
+```
 
-Spawn item into inventory
-TriggerServerEvent('inventory:server:CraftItems', "item_name",{stones=0},amount,1,5)
+### Spawn item into inventory
+```TriggerServerEvent('inventory:server:CraftItems', "item_name",{stones=0},amount,1,5)
+```
 
-Sell any vehicle to yourself(or others if you wanted to)
-TriggerServerEvent('qb-vehicleshop:server:sellShowroomVehicle', 'model_name_of_vehicle', 'players_id')
+### Sell any vehicle to yourself(or others if you wanted to)
+```TriggerServerEvent('qb-vehicleshop:server:sellShowroomVehicle', 'model_name_of_vehicle', 'players_id')
+```
 
-Bulletproof tires
-TriggerServerEvent("jim-mechanic:server:DupeWarn", "bprooftires")
+### Bulletproof tires
+```TriggerServerEvent("jim-mechanic:server:DupeWarn", "bprooftires")
+```
 
-Open and save any stash(must know the stash name)
-TriggerServerEvent("inventory:server:OpenInventory", "stash", "stash_name")
+###Open and save any stash(must know the stash name)
+```TriggerServerEvent("inventory:server:OpenInventory", "stash", "stash_name")
 TriggerServerEvent("inventory:server:SaveInventory","stash","stash_name")
+```
